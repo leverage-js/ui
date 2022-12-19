@@ -1,0 +1,100 @@
+@import 'tokens';
+
+.content-card {
+    display: block;
+
+    width: 100%;
+
+    padding-top: $medium-input-top-padding;
+    padding-right: $lateral-content-margin;
+    padding-bottom: $medium-input-bottom-padding;
+    padding-left: $lateral-content-margin;
+
+    background: $white;
+
+    border-radius: $border-radius-medium;
+    box-shadow: $elevation-static;
+
+    row-input {
+        display: flex;
+        justify-content: space-between;
+
+        padding: $vertical-content-margin-large 0;
+
+        &:not(&:last-child) {
+            border-bottom: $outline-standard solid $blue-10;
+        }
+
+        actions-wrapper {
+            display: flex;
+            justify-content: right;
+            gap: $input-spacing;
+
+            width: 100%;
+        }
+
+        & > label {
+            $row-input-min-width: 255px + $lateral-content-margin;
+
+            display: flex;
+
+            width: 30%;
+            min-width: $row-input-min-width;
+
+            @include text-content-primary;
+
+            icon-wrapper {
+                display: inline-flex;
+
+                margin-left: 5px;
+            }
+        }
+
+        input-wrapper {
+            width: 70%;
+        }
+
+        &:not(.row-input-textarea) {
+            align-items: center;
+
+            label {
+                align-items: center;
+            }
+        }
+
+        &.row-input-textarea label {
+            margin-top: $input-top-padding;
+        }
+    }
+
+    table {
+        width: 100%;
+
+        th {
+            padding: $vertical-content-margin-large 0 $vertical-content-margin-medium 0;
+
+            text-align: left;
+
+            @include text-cta-secondary;
+        }
+
+        td {
+            padding: $headline-to-content-spacing 0;
+
+            border-top: $outline-standard solid $blue-10;
+
+            @include text-content-primary;
+        }
+
+        th:not(:last-of-type),
+        td:not(:last-of-type) {
+            padding-right: $lateral-content-margin;
+        }
+
+        &.table-without-header {
+            tr:first-of-type td {
+                border-top: none;
+            }
+        }
+    }
+}

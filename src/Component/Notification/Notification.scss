@@ -1,0 +1,41 @@
+@import 'tokens';
+
+notification-component {
+  display: block;
+
+  padding-top: $large-input-top-padding;
+  padding-right: $large-input-horizontal-padding;
+  padding-bottom: $large-input-bottom-padding;
+  padding-left: $large-input-horizontal-padding;
+
+  border-radius: $border-radius-small;
+
+  color: $white;
+  @include text-content-primary;
+
+  transition: all 1s;
+
+  &.notification-error {
+    background: $red;
+  }
+
+  &.notification-success {
+    background: $blue-50;
+  }
+
+  &.notification-show {
+    opacity: 1;
+  }
+
+  &.notification-hide {
+    transform: translateY(100px);
+
+    height: 0;
+
+    padding: 0;
+
+    opacity: 0;
+
+    pointer-events: none;
+  }
+}

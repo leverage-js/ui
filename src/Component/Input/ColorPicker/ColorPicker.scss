@@ -1,0 +1,80 @@
+@import 'tokens';
+
+@import '../Input';
+
+color-picker-input-wrapper {
+    position: relative;
+
+    display: inline-block;
+
+    width: 100%;
+
+    color-picker-input-actions-wrapper {
+        position: absolute;
+        top: $input-top-padding;
+        left: $input-horizontal-padding;
+
+        display: flex;
+        align-items: center;
+        gap: $input-content-spacing;
+
+        cursor: pointer;
+
+        button-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        color-circle-wrapper {
+            background-image: url('./img/color-circle-bg.svg');
+        }
+
+        color-circle {
+            display: block;
+            width: $icon-medium-width;
+            height: $icon-medium-height;
+
+            border-radius: $border-radius-circular;
+        }
+
+        &[disabled] {
+            cursor: not-allowed;
+
+            color-circle {
+                background-color: $blue-30;
+            }
+        }
+    }
+
+    color-picker-wrapper {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
+
+    &.color-picker-position-bottom color-picker-wrapper {
+        $input-height: 47px;
+        $color-picker-top: $input-height + $vertical-content-margin-small;
+
+        top: $color-picker-top;
+    }
+
+    &.color-picker-position-top color-picker-wrapper {
+        top: -$vertical-content-margin-small;
+        transform: translateY(-100%);
+    }
+}
+
+.color-picker-input {
+    width: 100%;
+
+    $color-picker-input-left-padding:
+        $input-horizontal-padding + 2 * $input-content-spacing + $icon-small-width + $icon-medium-width
+    ;
+    padding-top: $input-top-padding;
+    padding-right: $input-horizontal-padding;
+    padding-bottom: $input-bottom-padding;
+    padding-left: $color-picker-input-left-padding;
+
+    cursor: pointer;
+}

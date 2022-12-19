@@ -1,0 +1,12 @@
+@import 'tokens';
+
+button-row {
+    display: flex;
+    gap: 15px;
+
+    &.secondary {
+        padding: 30px;
+
+        background-color: $blue-100;
+    }
+}

@@ -1,0 +1,54 @@
+@import 'tokens';
+
+text-cta-card {
+    display: block;
+
+    width: 100%;
+
+    margin-bottom: $vertical-content-margin-large;
+
+    padding-top: $medium-input-top-padding;
+    padding-right: $lateral-content-margin;
+    padding-bottom: $medium-input-bottom-padding;
+    padding-left: $lateral-content-margin;
+
+    border: $outline-standard solid $blue-30;
+    border-radius: $border-radius-medium;
+
+    background-color: $blue-10;
+
+    &.active {
+        border: $outline-standard solid $white;
+
+        background-color: $white;
+
+        box-shadow: $elevation-static;
+    }
+
+    h2 {
+        margin-top: $vertical-content-margin-large;
+        margin-bottom: $vertical-content-margin-small;
+
+        @include headline-medium;
+        color: $blue-100;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: $vertical-content-margin-medium;
+
+        @include text-content-primary;
+        color: $blue-40;
+    }
+
+    card-actions {
+        display: flex;
+        gap: $input-content-spacing;
+
+        margin-bottom: $vertical-content-margin-medium;
+
+        drag-icon-wrapper icon-component {
+            cursor: grab;
+        }
+    }
+}

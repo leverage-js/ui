@@ -1,0 +1,29 @@
+@import 'tokens';
+
+.icon {
+    &.action-icon {
+        color: $blue-40;
+        cursor: pointer;
+
+        &:hover {
+            color: $blue-100;
+        }
+    }
+
+    &.disabled-icon {
+        color: $blue-30;
+        cursor: not-allowed;
+    }
+
+    &.light-icon {
+        color: $blue-40;
+    }
+
+    &.negative-icon {
+        color: $red;
+    }
+
+    &.positive-icon {
+        color: $blue-50;
+    }
+}

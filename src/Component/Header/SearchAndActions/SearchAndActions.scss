@@ -1,0 +1,13 @@
+@import 'tokens';
+
+search-and-actions {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: $headline-to-content-spacing;
+
+    actions-wrapper {
+        display: flex;
+        gap: $input-spacing;
+    }
+}

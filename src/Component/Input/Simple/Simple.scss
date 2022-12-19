@@ -1,0 +1,17 @@
+@import 'tokens';
+
+@import '../Input';
+
+simple-input-wrapper {
+  position: relative;
+
+  display: inline-block;
+
+  width: 100%;
+}
+
+.simple-input {
+  width: 100%;
+
+  padding: $input-top-padding $input-horizontal-padding $input-bottom-padding;
+}

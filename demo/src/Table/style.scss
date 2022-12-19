@@ -1,0 +1,17 @@
+@import 'tokens';
+
+.demo-page.table {;
+    width: 100%;
+
+    background-color: $blue-10;
+
+    .content-card {
+        max-width: 700px;
+    }
+
+    .table {
+        td.actions-column {
+            width: 100px;
+        }
+    }
+}

@@ -1,0 +1,156 @@
+//region Border
+$border-radius-small: 5px;
+$border-radius-medium: 10px;
+$border-radius-circular: 100px;
+//endregion
+
+//region Neutral
+$white: #FFFFFF;
+$red:   #DB4444;
+$black: rgba(0, 0, 0, 0.7);
+//endregion
+
+//region Blue
+$blue-10: #F4F4F6;
+$blue-30: #E0E0E9;
+$blue-40: #9090A2;
+$blue-50: #19ADF9;
+$blue-100: #05052F;
+//endregion
+
+//region Elevation
+$elevation-static: 0 20px 30px rgba($blue-100, 0.03);
+$elevation-hover: 0 20px 30px rgba($blue-100, 0.1);
+$elevation-icon: 0 2px 2px rgba($blue-100, 0.2);
+//endregion
+
+//region Outline
+$outline-standard: 1px;
+$outline-thick: 2px;
+//endregion
+
+$content-max-width: 240px;
+
+//region Icon
+$icon-huge-height: 70px;
+$icon-huge-width: 70px;
+
+$icon-large-height: 30px;
+$icon-large-width: 30px;
+
+$icon-medium-height: 25px;
+$icon-medium-width: 25px;
+
+$icon-small-height: 20px;
+$icon-small-width: 20px;
+//endregion
+
+//region Toggle
+$toggle-height: 25px;
+$toggle-width: 40px;
+
+$toggle-circle-height: 19px;
+$toggle-circle-width: 19px;
+//endregion
+
+//region Color Picker
+$color-picker-width: 295px;
+$color-picker-bar-height: 20px;
+$color-picker-main-area-height: 295px;
+
+$color-picker-selector-height: 14px;
+$color-picker-selector-width: 14px;
+//endregion
+
+//region Modal
+$standard-modal-width: 575px;
+$max-modal-height: 600px;
+//endregion
+
+$divisor-line-thick-height: 5px;
+
+//region Content Spacing
+$vertical-section-spacing: 50px;
+$vertical-large-properties-pane: 45px;
+$vertical-medium-properties-pane: 40px;
+$vertical-small-properties-pane: 35px;
+$vertical-content-margin-max: 30px;
+$headline-to-content-spacing: 25px;
+$vertical-content-margin-large: 20px;
+$vertical-content-margin-medium: 15px;
+$vertical-content-margin-small: 10px;
+
+$horizontal-content-margin: 110px;
+$large-lateral-content-margin: 50px;
+$lateral-content-margin: 30px;
+$tiny-lateral-content-margin: 5px;
+$min-lateral-content-margin: 3px;
+
+$input-spacing: 15px;
+
+$icon-top-margin: 3px;
+$icon-bottom-margin: 3px;
+//endregion
+
+//region Form Spacing
+$large-input-top-padding: 14px;
+$input-top-padding: 12px;
+$medium-input-top-padding: 10px;
+$small-input-top-padding: 7px;
+$tiny-input-top-padding: 5px;
+
+$large-input-bottom-padding: 16px;
+$input-bottom-padding: 13px;
+$medium-input-bottom-padding: 10px;
+$small-input-bottom-padding: 8px;
+$tiny-input-bottom-padding: 5px;
+
+$input-content-spacing: 10px;
+
+$large-input-horizontal-padding: 20px;
+$input-horizontal-padding: 15px;
+$small-input-horizontal-padding: 7px;
+//endregion
+
+//region Typography
+@mixin headline-large {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+@mixin headline-medium {
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+@mixin text-content-primary {
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 20px;
+}
+
+@mixin text-cta-primary {
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+@mixin text-cta-secondary {
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+//endregion

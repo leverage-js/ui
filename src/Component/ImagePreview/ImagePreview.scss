@@ -1,0 +1,32 @@
+@import 'tokens';
+
+image-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-width: 300px;
+
+    border: $outline-standard solid $blue-30;
+    border-radius: $border-radius-small;
+
+    background-color: $white;
+
+    img {
+        width: 100%;
+        height: 100%;
+
+        border-radius: $border-radius-small;
+
+        object-fit: cover;
+    }
+
+    image-placeholder {
+        padding: $vertical-content-margin-max $lateral-content-margin;
+
+        background-color: $blue-10;
+
+        border-radius: $border-radius-circular;
+    }
+}

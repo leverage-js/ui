@@ -1,0 +1,27 @@
+@import 'tokens';
+
+.demo-page {
+    display: block;
+
+    min-height: 100vh;
+
+    padding: 30px;
+
+    a,
+    a:visited {
+        color: $blue-50;
+        text-decoration: none;
+    }
+
+    h1 {
+        color: $black;
+    }
+
+    h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+
+        color: $blue-40;
+        font-size: 20px;
+    }
+}

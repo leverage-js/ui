@@ -1,0 +1,22 @@
+@import 'tokens';
+
+header-component {
+  display: block;
+
+  padding: $vertical-section-spacing $horizontal-content-margin;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: $input-content-spacing;
+
+    margin: 0;
+
+    @include headline-large;
+  }
+
+  header-content {
+    display: block;
+    margin-top: $headline-to-content-spacing;
+  }
+}

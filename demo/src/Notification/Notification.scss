@@ -1,0 +1,13 @@
+@import 'tokens';
+
+notification-demo-wrapper {
+    display: flex;
+    gap: 10px;
+
+    notification-wrapper {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+    }
+}

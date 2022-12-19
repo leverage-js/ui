@@ -1,0 +1,15 @@
+@import 'tokens';
+
+toggle-with-label {
+    display: flex;
+
+    & > label {
+        width: 100%;
+
+        margin-top: $icon-top-margin;
+        margin-left: $input-spacing;
+
+        @include text-cta-secondary;
+        color: $blue-100;
+    }
+}

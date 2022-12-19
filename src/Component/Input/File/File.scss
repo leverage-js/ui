@@ -1,0 +1,32 @@
+@import 'tokens';
+
+@import '../Input';
+
+file-input-wrapper {
+  position: relative;
+
+  display: inline-block;
+
+  width: 100%;
+
+  actions-wrapper {
+    position: absolute;
+    top: $input-top-padding;
+    right: $input-horizontal-padding;
+
+    display: flex;
+    gap: $input-content-spacing;
+  }
+}
+
+.file-input {
+  width: 100%;
+
+  $file-input-right-padding: $input-horizontal-padding + 2 * $input-content-spacing + 2 * $icon-small-width;
+  padding-top: $input-top-padding;
+  padding-right: $file-input-right-padding;
+  padding-bottom: $input-bottom-padding;
+  padding-left: $input-horizontal-padding;
+
+  cursor: pointer;
+}

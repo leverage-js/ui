@@ -1,0 +1,69 @@
+@import 'tokens';
+
+color-picker {
+    display: block;
+
+    width: fit-content;
+
+    padding: $vertical-content-margin-max $lateral-content-margin;
+
+    background-color: $white;
+
+    border: $outline-standard solid $blue-30;
+    border-radius: $border-radius-medium;
+    box-shadow: $elevation-hover;
+
+    .react-colorful {
+        width: $color-picker-width;
+        height:
+            $color-picker-main-area-height
+      + 2 * ($color-picker-bar-height + $vertical-content-margin-large);
+    ;
+    }
+    .react-colorful__saturation {
+        display: block;
+
+        height: $color-picker-main-area-height;
+
+        border-width: 5px;
+
+        border-radius: $border-radius-small;
+    }
+    .react-colorful__hue,
+    .react-colorful__alpha {
+        height: $color-picker-bar-height;
+
+        margin-top: $vertical-content-margin-large;
+
+        border-radius: $border-radius-circular;
+    }
+    .react-colorful__alpha {
+        background-image: url('./img/alpha-bar-bg.svg');
+    }
+    .react-colorful__pointer {
+        box-sizing: content-box;
+
+        width: $color-picker-selector-width;
+        height: $color-picker-selector-height;
+
+        box-shadow: $elevation-icon;
+    }
+
+    simple-input-wrapper {
+        margin-top: $headline-to-content-spacing;
+    }
+
+    & > .actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-top: $headline-to-content-spacing;
+    }
+
+    buttons-wrapper {
+        display: flex;
+        gap: $input-spacing;
+        justify-content: flex-end;
+    }
+}

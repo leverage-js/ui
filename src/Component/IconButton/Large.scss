@@ -1,0 +1,17 @@
+@import 'tokens';
+
+.icon-button-large {
+  $icon-button-large-height: $icon-large-height + $small-input-top-padding + $small-input-bottom-padding;
+  height: $icon-button-large-height;
+
+  &.icon-button-primary {
+    padding: $small-input-top-padding $small-input-horizontal-padding $small-input-bottom-padding;
+  }
+
+  &.icon-button-secondary {
+    $padding-top-minus-outline: $small-input-top-padding - $outline-standard;
+    $padding-horizontal-minus-outline: $small-input-horizontal-padding - $outline-standard;
+    $padding-bottom-minus-outline: $small-input-bottom-padding - $outline-standard;
+    padding: $padding-top-minus-outline $padding-horizontal-minus-outline $padding-bottom-minus-outline;
+  }
+}

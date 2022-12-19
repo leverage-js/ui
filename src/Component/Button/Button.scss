@@ -1,0 +1,26 @@
+@import 'tokens';
+
+@import './Primary';
+@import './Secondary';
+
+button.button {
+  border-color: transparent;
+  border-radius: $border-radius-small;
+  border-width: 0;
+
+  @include text-cta-primary;
+
+  cursor: pointer;
+}
+
+.button-large {
+  padding: $input-top-padding $large-input-horizontal-padding $input-bottom-padding;
+}
+
+.button-small {
+  padding: $small-input-top-padding $input-horizontal-padding $small-input-bottom-padding;
+}
+
+.button-scalable {
+  width: 100%;
+}

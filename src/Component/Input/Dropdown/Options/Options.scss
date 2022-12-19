@@ -1,0 +1,71 @@
+@import 'tokens';
+
+dropdown-wrapper options-component {
+    display: block;
+
+    padding-top: $tiny-input-top-padding;
+    padding-right: $input-horizontal-padding;
+    padding-bottom: $tiny-input-bottom-padding;
+    padding-left: $input-horizontal-padding;
+
+    background-color: $white;
+
+    border: $outline-standard solid $blue-30;
+    border-radius: $border-radius-small;
+    box-shadow: $elevation-static;
+
+    @include text-content-primary;
+
+    options-container {
+        display: block;
+
+        margin-top: $medium-input-top-padding;
+
+        background-color: $white;
+
+        overflow-y: auto;
+        scrollbar-color: $blue-10 $white;
+
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: $white;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $blue-10;
+            border-radius: $border-radius-circular;
+        }
+    }
+
+    search-input-wrapper {
+        $search-input-margin-top: $vertical-content-margin-medium - $tiny-input-top-padding;
+
+        display: block;
+
+        padding-top: $search-input-margin-top;
+        padding-bottom: $vertical-content-margin-large;
+
+        border-bottom: $outline-standard solid $blue-10;
+    }
+
+    option-component {
+        display: block;
+
+        padding: $input-top-padding 0;
+
+        &:not(.options-no-results) {
+            cursor: pointer;
+
+            &:hover, &.option-selected {
+                color: $blue-50;
+            }
+        }
+
+        &.options-no-results {
+            color: $blue-30;
+        }
+    }
+}

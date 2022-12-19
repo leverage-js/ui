@@ -1,0 +1,32 @@
+@import 'tokens';
+
+.button.button-secondary {
+  background: $white;
+
+  border: $outline-standard solid $blue-50;
+
+  color: $blue-50;
+
+  &.button-warning {
+    border-color: $red;
+
+    color: $red;
+  }
+
+  &:hover {
+    border-color: $blue-100;
+
+    color: $blue-100;
+  }
+}
+
+button[disabled].button-secondary {
+  cursor: not-allowed;
+
+  &,
+  &:hover {
+    border-color: $blue-30;
+
+    color: $blue-30;
+  }
+}

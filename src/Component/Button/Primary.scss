@@ -1,0 +1,24 @@
+@import 'tokens';
+
+.button-primary {
+  background: $blue-50;
+
+  color: $white;
+
+  &.button-warning {
+    background-color: $red;
+  }
+
+  &:hover {
+    background-color: $blue-100;
+  }
+}
+
+button[disabled].button-primary {
+  cursor: not-allowed;
+
+  &,
+  &:hover {
+    background: $blue-30;
+  }
+}
