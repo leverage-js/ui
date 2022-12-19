@@ -1,0 +1,45 @@
+@import 'tokens';
+
+.button.icon-button-secondary {
+  background: transparent;
+
+  border: $outline-standard solid $blue-50;
+
+  &.icon-button-warning {
+    border-color: $red;
+
+    svg {
+      color: $red;
+    }
+  }
+
+  &:hover {
+    border-color: $white;
+
+    svg {
+      color: $white;
+    }
+  }
+
+  svg {
+    color: $blue-50;
+  }
+}
+
+button.icon-button-secondary[disabled] {
+  &,
+  &:hover {
+    border-color: $blue-40;
+  }
+
+  &:hover svg,
+  svg,
+  svg:hover {
+    color: $blue-40;
+  }
+
+  &,
+  svg {
+    cursor: not-allowed;
+  }
+}

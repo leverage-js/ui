@@ -1,0 +1,35 @@
+@import 'tokens';
+
+@import '../Input';
+
+number-input {
+    position: relative;
+
+    display: inline-block;
+
+    width: 100%;
+
+    actions-wrapper {
+        display: none;
+        position: absolute;
+
+        right: $input-content-spacing;
+        top: 3px;
+    }
+
+    &:hover actions-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.number-input {
+    $number-input-padding-right: 2 * $input-content-spacing + $icon-small-width;
+
+    width: 100%;
+
+    padding-top: $input-top-padding;
+    padding-right: $input-horizontal-padding;
+    padding-bottom: $input-bottom-padding;
+    padding-left: $input-horizontal-padding;
+}

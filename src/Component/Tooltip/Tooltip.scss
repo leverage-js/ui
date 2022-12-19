@@ -1,0 +1,49 @@
+@import 'tokens';
+
+tooltip-component {
+  position: relative;
+
+  display: inline-flex;
+}
+
+tooltip-text {
+  position: absolute;
+  z-index: 1;
+
+  display: block;
+
+  width: max-content;
+  max-width: 250px;
+
+  padding-top: $input-top-padding;
+  padding-right: $input-horizontal-padding;
+  padding-bottom: $input-bottom-padding;
+  padding-left: $input-horizontal-padding;
+
+  background: $white;
+
+  border-radius: $border-radius-small;
+
+  box-shadow: $elevation-hover;
+
+  color: $blue-100;
+  @include text-content-primary;
+
+  &.tooltip-bottom {
+    bottom: -$vertical-content-margin-small;
+    left: 50%;
+    transform: translate(-50%, 100%);
+  }
+
+  &.tooltip-top {
+    top: -$vertical-content-margin-small;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+
+  &.tooltip-top-right {
+    top: -$vertical-content-margin-small;
+    left: 0;
+    transform: translate(0, -100%);
+  }
+}

@@ -1,0 +1,11 @@
+@import 'tokens';
+
+@import './Large';
+@import './Primary';
+@import './Secondary';
+
+.icon-button {
+  border-radius: $border-radius-small;
+
+  cursor: pointer;
+}

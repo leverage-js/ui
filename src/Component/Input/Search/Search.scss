@@ -1,0 +1,30 @@
+@import 'tokens';
+
+@import '../Input';
+
+search-input {
+  position: relative;
+
+  display: inline-block;
+
+  .search-icon {
+    position: absolute;
+
+    top: $input-top-padding;
+    left: $input-horizontal-padding;
+  }
+}
+
+.search-input {
+  width: $content-max-width;
+
+  $search-input-padding-left: $input-horizontal-padding + $icon-small-width + $input-content-spacing;
+  padding-top: $input-top-padding;
+  padding-right: $input-horizontal-padding;
+  padding-bottom: $input-bottom-padding;
+  padding-left: $search-input-padding-left;
+}
+
+.search-input-scalable {
+  width: 100%;
+}

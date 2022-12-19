@@ -1,0 +1,72 @@
+@import 'tokens';
+
+@import "./ToggleWithLabel";
+
+toggle-component {
+    display: inline-block;
+
+    cursor: pointer;
+
+    &.toggle-on {
+        toggle-container {
+            background-color: $blue-50;
+        }
+
+        toggle-circle {
+            margin-left: 15px;
+        }
+    }
+    &.toggle-off {
+        toggle-container {
+            background-color: $blue-30;
+
+            toggle-circle {
+                margin-left: 0;
+            }
+        }
+    }
+    &.toggle-disabled {
+        cursor: not-allowed;
+
+        toggle-container {
+            background-color: $blue-30;
+
+            pointer-events: none;
+
+            toggle-circle {
+                background-color: $blue-10;
+            }
+        }
+    }
+
+    toggle-container {
+        display: inline-block;
+
+        width: $toggle-width;
+        height: $toggle-height;
+
+        padding-top: $icon-top-margin;
+        padding-right: $min-lateral-content-margin;
+        padding-bottom: $icon-bottom-margin;
+        padding-left: $min-lateral-content-margin;
+
+        border-radius: $border-radius-circular;
+
+        &:hover {
+            background-color: $blue-100;
+        }
+
+        toggle-circle {
+            display: inline-block;
+
+            width: $toggle-circle-width;
+            height: $toggle-circle-height;
+
+            border-radius: $border-radius-circular;
+
+            background-color: $white;
+
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}

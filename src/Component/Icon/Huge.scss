@@ -1,0 +1,11 @@
+@import 'tokens';
+
+@import './Icon';
+
+icon-component.huge {
+  &,
+  icon-svg {
+    width: $icon-huge-width;
+    height: $icon-huge-height;
+  }
+}

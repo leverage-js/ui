@@ -1,0 +1,11 @@
+@import 'tokens';
+
+.demo-page.error-card .demo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 600px;
+
+    background-color: $blue-10;
+}

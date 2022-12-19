@@ -1,0 +1,110 @@
+@import 'tokens';
+
+.modal {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $black;
+
+    & > .content-card {
+        width: $standard-modal-width;
+
+        & > h2 {
+            $modal-body-extra-width: 2 * $lateral-content-margin;
+            $padding-top: $headline-to-content-spacing - $medium-input-top-padding;
+
+            width: calc(100% + #{$modal-body-extra-width});
+
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: -$lateral-content-margin;
+
+            padding-top: $padding-top;
+            padding-bottom: $headline-to-content-spacing;
+            padding-left: $lateral-content-margin;
+
+            border-bottom: $outline-standard solid $blue-10;
+
+            @include headline-medium;
+            color: $blue-100;
+        }
+
+        & > .content {
+            $header-footer-height: 110px;
+            $content-max-height: $max-modal-height - $header-footer-height;
+
+            margin-top: $vertical-content-margin-max;
+            margin-right: -$lateral-content-margin + $input-horizontal-padding;
+            padding-right: $lateral-content-margin - $input-horizontal-padding;
+
+            max-height: $content-max-height;
+
+            overflow-y: auto;
+
+            scrollbar-color: $blue-10 $white;
+
+            &::-webkit-scrollbar {
+                width: 7px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: $white;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $blue-10;
+                border-radius: $border-radius-circular;
+            }
+
+            & > .modal-notes {
+                display: flex;
+                flex-direction: column;
+                gap: $vertical-content-margin-small;
+
+                margin-bottom: $vertical-content-margin-large;
+            }
+
+            & > input-with-label:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        & > .actions {
+            $margin-bottom: $vertical-content-margin-max - $medium-input-bottom-padding;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: $input-horizontal-padding;
+
+            margin-top: $vertical-content-margin-max;
+            margin-bottom: $margin-bottom;
+        }
+    }
+
+    &.has-actions-separator > .content-card > .actions {
+        $extra-width: 2 * $lateral-content-margin;
+        $padding-bottom: $vertical-content-margin-large - $medium-input-bottom-padding;
+
+        width: calc(100% + #{$extra-width});
+
+        margin-top: $vertical-small-properties-pane;
+        margin-bottom: 0;
+        margin-left: -$lateral-content-margin;
+
+        padding-top: $vertical-content-margin-large;
+        padding-bottom: $padding-bottom;
+        padding-left: $lateral-content-margin;
+        padding-right: $lateral-content-margin;
+
+        border-top: $outline-standard solid $blue-10;
+    }
+}

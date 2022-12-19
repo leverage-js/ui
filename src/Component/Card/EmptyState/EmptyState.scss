@@ -1,0 +1,27 @@
+@import 'tokens';
+
+empty-state-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  $vertical-padding: $vertical-medium-properties-pane - $medium-input-top-padding;
+  padding: $vertical-padding 0;
+
+  icon-wrapper {
+    display: flex;
+
+    padding: $input-content-spacing;
+
+    background-color: $blue-10;
+    border-radius: $border-radius-circular;
+  }
+
+  p {
+    margin-top: $vertical-content-margin-medium;
+    margin-bottom: 0;
+
+    color: $blue-40;
+    @include text-content-primary;
+  }
+}

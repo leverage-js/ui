@@ -1,0 +1,48 @@
+{
+  "name": "leverage-ui-demo",
+  "description": "Leverage UI demo",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack --config webpack.config.js --mode production",
+    "watch": "webpack --config webpack.config.js --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leverage-js/ui.git"
+  },
+  "author": "Architech Labs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leverage-js/ui/issues"
+  },
+  "homepage": "https://github.com/leverage-js/ui#readme",
+  "dependencies": {
+    "@leverage-js/ui": "^0.0.1",
+    "@simonwep/pickr": "^1.8.0",
+    "colord": "^2.9.2",
+    "http-status-codes": "^2.2.0",
+    "lodash": "^4.17.21",
+    "lodash.capitalize": "^4.2.1",
+    "lodash.clonedeep": "^4.5.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-colorful": "^5.5.1",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "zustand": "^4.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-react": "^7.17.12",
+    "@svgr/webpack": "^6.5.0",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "jest": "^27.4.7",
+    "node-sass": "^6.0.1",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

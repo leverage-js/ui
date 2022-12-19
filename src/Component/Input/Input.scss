@@ -1,0 +1,42 @@
+@import 'tokens';
+
+.input {
+  display: inline-block;
+
+  background: $white;
+
+  border: $outline-standard solid $blue-30;
+  border-radius: $border-radius-small;
+
+  color: $blue-100;
+  @include text-content-primary;
+
+  outline: none;
+
+  &:hover {
+    border-color: $blue-50;
+  }
+
+  &::placeholder {
+    color: $blue-40;
+  }
+}
+
+.input-error {
+  &,
+  &:hover {
+    border-color: $red;
+  }
+}
+
+*[disabled].input {
+  background-color: $blue-10;
+
+  color: $blue-40;
+
+  cursor: not-allowed;
+
+  &:hover {
+    border-color: $blue-30;
+  }
+}

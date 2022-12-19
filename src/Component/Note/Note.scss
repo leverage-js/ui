@@ -1,0 +1,29 @@
+@import 'tokens';
+
+note-component {
+    display: block;
+
+    padding-top: $large-input-top-padding;
+    padding-right: $large-input-horizontal-padding;
+    padding-bottom: $large-input-bottom-padding;
+    padding-left: $large-input-horizontal-padding;
+
+    width: 100%;
+
+    background: $blue-10;
+
+    border-radius: $border-radius-small;
+
+    color: $blue-100;
+    @include text-content-primary;
+
+    a {
+        color: $blue-50;
+        text-decoration: none;
+        @include text-cta-primary;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+}

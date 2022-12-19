@@ -1,0 +1,29 @@
+@import 'tokens';
+
+icon-component {
+  display: inline-flex;
+
+  cursor: pointer;
+
+  svg {
+    color: $blue-40;
+
+    &.active,
+    &:hover {
+      color: $blue-100;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    svg {
+      color: $blue-30;
+
+      &.active,
+      &:hover {
+        color: $blue-30;
+      }
+    }
+  }
+}

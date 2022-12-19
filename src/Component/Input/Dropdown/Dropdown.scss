@@ -1,0 +1,69 @@
+@import 'tokens';
+
+@import '../Input';
+
+dropdown-wrapper {
+    position: relative;
+
+    display: inline-block;
+
+    width: 100%;
+
+    actions-wrapper {
+        position: absolute;
+        top: $input-top-padding;
+        right: $input-horizontal-padding;
+
+        display: flex;
+        align-items: center;
+        gap: $input-content-spacing;
+
+        cursor: pointer;
+
+        button-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        &[disabled] {
+            cursor: not-allowed;
+        }
+    }
+
+    options-wrapper {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+
+        options-container {
+            max-height: 420px; // 9.5 options max
+        }
+    }
+
+    &.options-position-bottom options-wrapper {
+        $input-height: 47px;
+        $options-top: $input-height + $vertical-content-margin-small;
+
+        top: $options-top;
+    }
+
+    &.options-position-top options-wrapper {
+        top: -$vertical-content-margin-small;
+        transform: translateY(-100%);
+    }
+
+    &.dropdown-fixed {
+        width: $content-max-width;
+    }
+}
+
+.dropdown {
+    width: 100%;
+
+    padding-top: $input-top-padding;
+    padding-right: $input-horizontal-padding;
+    padding-bottom: $input-bottom-padding;
+    padding-left: $input-horizontal-padding;
+
+    cursor: pointer;
+}

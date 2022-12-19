@@ -1,0 +1,32 @@
+@import 'tokens';
+
+.table {
+    width: 100%;
+
+    th {
+        padding: $vertical-content-margin-large 0 $vertical-content-margin-medium 0;
+
+        text-align: left;
+
+        @include text-cta-secondary;
+    }
+
+    td {
+        padding: $headline-to-content-spacing 0;
+
+        border-top: $outline-standard solid $blue-10;
+
+        @include text-content-primary;
+    }
+
+    th:not(:last-of-type),
+    td:not(:last-of-type) {
+        padding-right: $lateral-content-margin;
+    }
+
+    &.table-without-header {
+        tr:first-of-type td {
+            border-top: none;
+        }
+    }
+}

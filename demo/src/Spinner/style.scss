@@ -1,0 +1,11 @@
+@import 'tokens';
+
+.demo-page.spinner-page {;
+    width: 100%;
+
+    background-color: $blue-10;
+
+    .content-card {
+        max-width: 400px;
+    }
+}

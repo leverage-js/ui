@@ -1,0 +1,1 @@
+export const VERTICAL_CONTENT_MARGIN_SMALL = 10;
