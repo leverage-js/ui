@@ -1,6 +1,6 @@
 {
   "name": "@leverage-js/ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Leverage UI",
   "main": "dist/index.js",
   "files": [
