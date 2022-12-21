@@ -12,6 +12,9 @@ export {default as TextCtaCard} from 'Component/Card/TextCta';
 
 export {default as ColorPicker} from 'Component/ColorPicker';
 export {default as Header} from 'Component/Header';
+export {default as SearchAndActions} from 'Component/Header/SearchAndActions';
+
+export {default as HugeSvg} from 'Component/Icon/SVG/HugeSvg';
 
 export {default as LargeFileIcon} from 'Component/Icon/Large/FileIcon';
 export {default as LargeImageIcon} from 'Component/Icon/Large/ImageIcon'
