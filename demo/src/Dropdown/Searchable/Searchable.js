@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import fonts from 'Demo/Data/fonts';
+import fonts from 'Data/fonts';
 
 import DemoPage from 'DemoPage/DemoPage';
 

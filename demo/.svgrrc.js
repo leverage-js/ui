@@ -4,5 +4,5 @@ module.exports = {
     // We set it to 'start' so our own className handling overrides the built in
     // one despite being set on the element as well.
     expandProps: 'start',
-    template: require('./src/svg-template.js'),
+    template: require('@leverage-js/ui/svg-template'),
 }

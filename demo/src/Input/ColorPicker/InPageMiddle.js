@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import {ColorPickerInput} from '@leverage-js/ui';
 
-import 'Demo/Dropdown/InPageMiddle.scss';
+import 'Dropdown/InPageMiddle.scss';
 
 export default function (props) {
     document.title = 'Color Picker Input (in the page middle)';

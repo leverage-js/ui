@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/leverage-js/ui#readme",
   "dependencies": {
-    "@leverage-js/ui": "^0.0.2",
+    "@leverage-js/ui": "^0.0.4",
     "@simonwep/pickr": "^1.8.0",
     "colord": "^2.9.2",
     "http-status-codes": "^2.2.0",
