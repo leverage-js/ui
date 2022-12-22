@@ -4,7 +4,10 @@
   "description": "Leverage UI",
   "main": "dist/index.js",
   "files": [
-    "dist/"
+    ".svgrrc.js",
+    "_tokens.scss",
+    "dist/",
+    "icons.scss"
   ],
   "scripts": {
     "test": "jest",

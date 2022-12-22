@@ -52,6 +52,7 @@ module.exports = [
             extensions: ['...', '.svg'],
             modules: [
                 'node_modules',
+                __dirname,
                 path.resolve(__dirname, 'src'),
             ],
         },
