@@ -30,7 +30,11 @@
     "http-status-codes": "^2.2.0",
     "lodash": "^4.17.21",
     "lodash.capitalize": "^4.2.1",
-    "lodash.clonedeep": "^4.5.0"
+    "lodash.clonedeep": "^4.5.0",
+    "prop-types": "^15.8.1",
+    "react-colorful": "^5.5.1",
+    "react-router-dom": "^6.3.0",
+    "zustand": "^4.0.0-rc.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -45,5 +49,9 @@
     "style-loader": "^3.3.1",
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2"
+  },
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   }
 }

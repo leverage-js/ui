@@ -8,12 +8,8 @@ module.exports = [
         },
         externalsType: 'commonjs',
         externals: {
-            'prop-types': 'prop-types',
             'react': 'react',
-            'react-colorful': 'react-colorful',
             'react-dom': 'react-dom',
-            'react-router-dom': 'react-router-dom',
-            'zustand': 'zustand',
         },
         module: {
             rules: [
