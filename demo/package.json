@@ -4,7 +4,8 @@
   "scripts": {
     "test": "jest",
     "build": "webpack --config webpack.config.js --mode production",
-    "watch": "webpack --config webpack.config.js --mode development --watch"
+    "watch": "webpack --config webpack.config.js --mode development --watch",
+    "publish-ui-assets": "cp node_modules/@leverage-js/ui/dist/* web/ui"
   },
   "repository": {
     "type": "git",
