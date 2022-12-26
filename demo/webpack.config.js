@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const bustBrowserCache = require('./webpack/bustBrowserCache');
+
 module.exports = [
     {
         stats:{errorDetails:true},
@@ -37,6 +39,11 @@ module.exports = [
             path: path.resolve(__dirname, 'web/build'),
             publicPath: '/build/',
         },
+        plugins: [
+            {
+                apply: bustBrowserCache,
+            },
+        ],
         resolve: {
             extensions: ['...', '.svg'],
             modules: [
