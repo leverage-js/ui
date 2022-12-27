@@ -5,7 +5,13 @@ const bustBrowserCache = require('./webpack/bustBrowserCache');
 
 module.exports = [
     {
-        stats:{errorDetails:true},
+        devServer: {
+            historyApiFallback: {index: '/'},
+            port: 9000,
+            static: {
+                directory: path.join(__dirname, 'web'),
+            },
+        },
         entry: {
             'index': './index.js',
         },
