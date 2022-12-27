@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const updateDemoUi = require('./webpack/updateDemoUi');
+
 module.exports = [
     {
         entry: {
@@ -44,6 +46,11 @@ module.exports = [
                 type: 'commonjs-static',
             },
         },
+        plugins: [
+            {
+                apply: updateDemoUi,
+            },
+        ],
         resolve: {
             extensions: ['...', '.svg'],
             modules: [
