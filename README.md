@@ -26,6 +26,13 @@ dev/npm serve
 updates are instant, while `ui` updates may take a couple of seconds for a full
 dev server restart.
 
+Latest demo is deployed on [ui.architechlabs.com](http://ui.architechlabs.com)
+(test server):
+
+```bash
+deploy ui.architechlabs.com
+```
+
 ### Export components
 
 `index.js` contains all the exports. You put any new components or
