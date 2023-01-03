@@ -13,6 +13,7 @@
   "scripts": {
     "test": "jest",
     "build": "webpack --config webpack.config.js --mode production",
+    "build:dev": "webpack --config webpack.config.js --mode development",
     "watch": "webpack --config webpack.config.js --mode development --watch"
   },
   "repository": {

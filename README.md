@@ -73,3 +73,12 @@ Notice the `publish-ui-assets`
 npm command that copies the `ui` assets to `web/ui`. You need a similar
 command for your app because some components expect their assets to be available
 in `/ui` from a web root.
+
+For sane `ui` error messages in app, you need a dev `ui` build:
+
+```bash
+dev/npm run build:dev
+```
+
+Then copy `dist/index.js` to `node_modules/@leverage-js/ui/dist` in app
+and rebuild it. `ui` error messages should be fine now.
