@@ -34,7 +34,6 @@
     "lodash.clonedeep": "^4.5.0",
     "prop-types": "^15.8.1",
     "react-colorful": "^5.5.1",
-    "react-router-dom": "^6.3.0",
     "zustand": "^4.0.0-rc.2"
   },
   "devDependencies": {
@@ -53,6 +52,7 @@
   },
   "peerDependencies": {
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0"
   }
 }
