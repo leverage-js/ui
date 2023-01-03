@@ -43,11 +43,11 @@ component renames here.
 ### Version increment
 
 Three commands for three kinds of increment:
-- `dev/npm version patch` 0.0.1 -> 0.0.2
-- `dev/npm version minor` 0.0.1 -> 0.1.0
-- `dev/npm version major` 0.0.1 -> 1.0.0
+- `npm version patch` 0.0.1 -> 0.0.2
+- `npm version minor` 0.0.1 -> 0.1.0
+- `npm version major` 0.0.1 -> 1.0.0
 
-It creates a git tag as well.
+It creates a git tag as well. `dev/npm` fails to create a git tag in my env.
 
 ### Build
 
