@@ -50,6 +50,7 @@ export {default as MediumImageIcon} from 'Component/Icon/Medium/ImageIcon';
 export {default as MediumIntegrationsIcon} from 'Component/Icon/Medium/IntegrationsIcon';
 export {default as MediumKingIcon} from 'Component/Icon/Medium/KingIcon';
 export {default as MediumLogOutIcon} from 'Component/Icon/Medium/LogOutIcon';
+export {default as MediumLockIcon} from 'Component/Icon/Medium/LockIcon';
 export {default as MediumMenuIcon} from 'Component/Icon/Medium/MenuIcon';
 export {default as MediumMyQuizzesIcon} from 'Component/Icon/Medium/MyQuizzesIcon';
 export {default as MediumOutcomesIcon} from 'Component/Icon/Medium/OutcomesIcon';
