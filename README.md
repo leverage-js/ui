@@ -19,10 +19,10 @@ always have the current `ui`.
 cd demo
 dev/npm install
 dev/npm run publish-ui-assets
-dev/npm serve
+dev/npm run serve
 ```
 
-`dev/npm serve` launches the dev web server with hot module reload. Demo file
+`dev/npm run serve` launches the dev web server with hot module reload. Demo file
 updates are instant, while `ui` updates may take a couple of seconds for a full
 dev server restart.
 
