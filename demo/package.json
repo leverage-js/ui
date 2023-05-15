@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/leverage-js/ui#readme",
   "dependencies": {
-    "@leverage-js/ui": "^0.0.5"
+    "@leverage-js/ui": "~0.0.8"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
