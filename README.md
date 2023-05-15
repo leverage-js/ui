@@ -52,7 +52,7 @@ It creates a git tag as well. `dev/npm` fails to create a git tag in my env.
 ### Build
 
 ```bash
-dev/npm build
+dev/npm run build
 ```
 
 For some reason, npm package publishing doesn't work with Docker npm.
