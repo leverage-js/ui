@@ -1,0 +1,9 @@
+#!/bin/bash
+
+project_name=leverage-js-ui
+output_sbom_path=/app/var/sbom/"$project_name"_npm-sbom.json
+
+docker-compose run npm run cyclonedx-npm -- \
+  --flatten-components \
+  --omit=dev \
+  --output-file=$output_sbom_path
