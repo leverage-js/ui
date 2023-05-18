@@ -1,2 +1,7 @@
+.idea
+
 dist
 node_modules
+
+/var/sbom/*
+!/var/sbom/.gitkeep
