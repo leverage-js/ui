@@ -23,9 +23,9 @@ export default function Modal({
             </div>
 
             <div className="actions">
-                <SecondaryButton onClick={onCancel}>
+                {onCancel && <SecondaryButton onClick={onCancel}>
                     Cancel
-                </SecondaryButton>
+                </SecondaryButton>}
 
                 {action}
             </div>
