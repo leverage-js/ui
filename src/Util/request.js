@@ -1,3 +1,5 @@
+import RequestError from 'Error/RequestError';
+
 export default function (beforeRequest, afterRequest) {
     function request(url, options) {
         beforeRequest?.();
@@ -9,7 +11,7 @@ export default function (beforeRequest, afterRequest) {
         return fetch(BASE_URL + url, requestOptions)
             .then(response => {
                 if (!response.ok) {
-                    throw Error('Unexpected status code: ' + response.status);
+                    throw new RequestError(response);
                 }
 
                 return response.json();
