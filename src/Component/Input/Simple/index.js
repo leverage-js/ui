@@ -30,7 +30,7 @@ export default function SimpleInput(props) {
 
     const disabledInput = <input
         className="input simple-input"
-        defaultValue={props.value ?? ''}
+        value={props.value ?? ''}
         disabled
         {...password}
         {...ref}
