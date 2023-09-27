@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {RgbaStringColorPicker} from 'react-colorful';
 
 import {extend} from 'colord';
@@ -11,29 +11,50 @@ import SecondaryButton from 'Component/Button/Secondary';
 import SimpleInput from 'Component/Input/Simple';
 import Toggle from 'Component/Toggle';
 
-import formatColor from 'Util/formatColor';
-import isRgb from 'Util/isRgb';
-import rgbFormat from 'Util/rgbFormat';
+import formatColor from './Util/formatColor';
+import isRgb from './Util/isRgb';
+import parseInputColor from './Util/parseInputColor';
+import rgbFormat from './Util/rgbFormat';
 
 import './ColorPicker.scss';
 
 export default function ColorPicker(props) {
     const [rgbColor, setRgbColor] = useState('');
+    const [colorInput, setColorInput] = useState('');
     const [isRgbFormat, setIsRgbFormat] = useState(false);
+    const inputError = useRef(false);
 
     useEffect(() => {
         if (!props.color) return;
 
-        setFormattedRgbColor(props.color);
-        setIsRgbFormat(
-            isRgb(props.color)
-        );
+        const isRgbType = isRgb(props.color);
+        setRgbColor(rgbFormat(props.color));
+        setColorInput(formatColor(props.color, isRgbType))
+        setIsRgbFormat(isRgbType);
     }, [props.color]);
 
-    function setFormattedRgbColor(color) {
-        setRgbColor(
-            rgbFormat(color)
-        );
+    function updateRgbToggle(rgbModeOn) {
+        setIsRgbFormat(rgbModeOn);
+        setColorInput(formatColor(rgbColor, rgbModeOn));
+    }
+
+    function updateSelectedColor(color) {
+        setColorInput(format(color));
+        setRgbColor(rgbFormat(color));
+    }
+
+    function updateColorInput(color) {
+        const validColor = parseInputColor(color, isRgbFormat);
+
+        if (validColor) {
+            inputError.current = false;
+            updateSelectedColor(validColor);
+
+            return;
+        }
+
+        inputError.current = true;
+        setColorInput(color);
     }
 
     function format(color) {
@@ -46,26 +67,27 @@ export default function ColorPicker(props) {
 
     function onSelect() {
         props.onSelect(
-            formatColor(rgbColor)
+            format(rgbColor)
         );
     }
 
     return <color-picker>
         <RgbaStringColorPicker
             color={rgbColor}
-            onChange={setRgbColor}
+            onChange={updateSelectedColor}
         />
 
         <SimpleInput
-            onChange={setFormattedRgbColor}
+            onChange={updateColorInput}
             scalable
-            value={format(rgbColor)}
+            value={colorInput}
+            error={inputError.current}
         />
 
         <div className="actions">
             <toggle-with-label>
                 <Toggle
-                    onChange={setIsRgbFormat}
+                    onChange={updateRgbToggle}
                     value={isRgbFormat}
                 />
 
@@ -82,6 +104,7 @@ export default function ColorPicker(props) {
                 <PrimaryButton
                     onClick={onSelect}
                     size="large"
+                    disabled={inputError.current}
                 >
                     Select
                 </PrimaryButton>
