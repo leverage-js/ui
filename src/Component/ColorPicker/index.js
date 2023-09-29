@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {RgbaStringColorPicker} from 'react-colorful';
 
-import {colord, extend} from 'colord';
+import {extend} from 'colord';
 import namesPlugin from 'colord/plugins/names';
 // Using CSS color names plugin for Colord
 extend([namesPlugin]);
@@ -10,6 +10,10 @@ import PrimaryButton from 'Component/Button/Primary';
 import SecondaryButton from 'Component/Button/Secondary';
 import SimpleInput from 'Component/Input/Simple';
 import Toggle from 'Component/Toggle';
+
+import formatColor from 'Util/formatColor';
+import isRgb from 'Util/isRgb';
+import rgbFormat from 'Util/rgbFormat';
 
 import './ColorPicker.scss';
 
@@ -32,34 +36,8 @@ export default function ColorPicker(props) {
         );
     }
 
-    function isHex(color) {
-        return color.startsWith('#');
-    }
-
-    function hexFormat(color) {
-        return isHex(color)
-            ? color
-            : colord(color).toHex()
-        ;
-    }
-
-    function isRgb(color) {
-        return color.startsWith('rgb');
-    }
-
-    function rgbFormat(color) {
-        return isRgb(color)
-            ? color
-            : colord(color).toRgbString()
-        ;
-    }
-
-    function formatColor(color) {
-        if (isRgbFormat) {
-            return rgbFormat(color);
-        }
-
-        return hexFormat(color);
+    function format(color) {
+        return formatColor(color, isRgbFormat);
     }
 
     function onClear() {
@@ -81,7 +59,7 @@ export default function ColorPicker(props) {
         <SimpleInput
             onChange={setFormattedRgbColor}
             scalable
-            value={formatColor(rgbColor)}
+            value={format(rgbColor)}
         />
 
         <div className="actions">
